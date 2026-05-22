@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Practice Toolkit</title>
+  <style>
+    :root {
+      --bg: #f6f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #5f6b7a;
+      --accent: #4f46e5;
+      --accent-light: #eef0ff;
+      --border: #e5e7eb;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      background: linear-gradient(135deg, #312e81, #4f46e5);
+      color: white;
+      padding: 48px 28px;
+    }
+
+    header h1 {
+      margin: 0 0 10px;
+      font-size: 34px;
+    }
+
+    header p {
+      margin: 0;
+      max-width: 850px;
+      font-size: 17px;
+      line-height: 1.5;
+      opacity: 0.95;
+    }
+
+    main {
+      max-width: 1150px;
+      margin: 28px auto;
+      padding: 0 22px 50px;
+    }
+
+    .intro {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin-bottom: 22px;
+    }
+
+    .intro h2 {
+      margin-top: 0;
+    }
+
+    .intro p {
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 20px;
+    }
+
+    .card p {
+      color: var(--muted);
+      line-height: 1.45;
+      min-height: 72px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent);
+      padding: 5px 9px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 12px;
+      text-decoration: none;
+      background: var(--accent);
+      color: white;
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .button.secondary {
+      background: #f3f4f6;
+      color: #374151;
+      border: 1px solid var(--border);
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      padding: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Practice Toolkit</h1>
+    <p>
+      A simple prototype space for practical tools, prompts and decision aids.
+      Start small, test what is useful, then build out the tools people actually return to.
+    </p>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Prototype Toolkit Home</h2>
+      <p>
+        This page is a starting point. Each card can become a separate tool or guidance page.
+        For now, the aim is to create a clean structure that can grow over time.
+      </p>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <span class="tag">MCA</span>
+        <h3>MCA Question Builder</h3>
+        <p>Decision-specific prompts for understanding, retaining, using/weighing and communicating.</p>
+        <a class="button secondary" href="#">Coming soon</a>
+      </div>
+
+      <div class="card">
+        <span class="tag">DoLS</span>
+        <h3>Form 3 Helper</h3>
+        <p>Common hotspots for mental capacity, no refusals, eligibility, necessity and proportionality.</p>
+        <a class="button secondary" href="#">Coming soon</a>
+      </div>
+
+      <div class="card">
+        <span class="tag">DoLS</span>
+        <h3>Form 4 Helper</h3>
+        <p>Best interests reasoning, consultation, objections, less restrictive options and RPR issues.</p>
+        <a class="button secondary" href="#">Coming soon</a>
+      </div>
+
+      <div class="card">
+        <span class="tag">QA</span>
+        <h3>Common QA Feedback</h3>
+        <p>Reusable wording for common assessor feedback, signatory returns and report strengthening.</p>
+        <a class="button secondary" href="#">Coming soon</a>
+      </div>
+
+      <div class="card">
+        <span class="tag">Care Act</span>
+        <h3>Review & Family Involvement</h3>
+        <p>Practical prompts for balancing consent, capacity, privacy and the need for a full picture.</p>
+        <a class="button secondary" href="#">Coming soon</a>
+      </div>
+
+      <div class="card">
+        <span class="tag">Court</span>
+        <h3>Court of Protection Helper</h3>
+        <p>Simple explainers for welfare orders, COPDOL11, objections and evidence planning.</p>
+        <a class="button secondary" href="#">Coming soon</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Prototype only. Not legal advice. Professional judgement remains required.
+  </footer>
+</body>
+</html>
