@@ -1,203 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Practice Toolkit</title>
-  <style>
-    :root {
-      --bg: #f6f7fb;
-      --card: #ffffff;
-      --text: #1f2937;
-      --muted: #5f6b7a;
-      --accent: #4f46e5;
-      --accent-light: #eef0ff;
-      --border: #e5e7eb;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AFA Practice Companion</title>
 
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-    }
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f5f7fb;
+    color:#1f2937;
+}
 
-    header {
-      background: linear-gradient(135deg, #312e81, #4f46e5);
-      color: white;
-      padding: 48px 28px;
-    }
+header{
+    background:linear-gradient(135deg,#16325c,#2f5ea8);
+    color:white;
+    padding:40px 30px;
+}
 
-    header h1 {
-      margin: 0 0 10px;
-      font-size: 34px;
-    }
+header h1{
+    margin:0;
+    font-size:38px;
+}
 
-    header p {
-      margin: 0;
-      max-width: 850px;
-      font-size: 17px;
-      line-height: 1.5;
-      opacity: 0.95;
-    }
+header p{
+    max-width:900px;
+    margin-top:10px;
+    line-height:1.6;
+    opacity:0.95;
+}
 
-    main {
-      max-width: 1150px;
-      margin: 28px auto;
-      padding: 0 22px 50px;
-    }
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:30px 20px 60px;
+}
 
-    .intro {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 22px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      margin-bottom: 22px;
-    }
+.section-intro{
+    background:white;
+    border-radius:16px;
+    padding:24px;
+    margin-bottom:28px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
 
-    .intro h2 {
-      margin-top: 0;
-    }
+.section-intro h2{
+    margin-top:0;
+}
 
-    .intro p {
-      color: var(--muted);
-      line-height: 1.55;
-    }
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:18px;
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-      gap: 16px;
-    }
+.card{
+    background:white;
+    border-radius:18px;
+    padding:24px;
+    box-shadow:0 2px 12px rgba(0,0,0,0.08);
+    transition:0.2s ease;
+    border:1px solid #e6e8ef;
+}
 
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 22px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
-    }
+.card:hover{
+    transform:translateY(-3px);
+}
 
-    .card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-    }
+.tag{
+    display:inline-block;
+    background:#eef4ff;
+    color:#2855a6;
+    padding:5px 10px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:bold;
+    margin-bottom:12px;
+}
 
-    .card h3 {
-      margin: 0 0 8px;
-      font-size: 20px;
-    }
+.card h3{
+    margin-top:0;
+    margin-bottom:10px;
+}
 
-    .card p {
-      color: var(--muted);
-      line-height: 1.45;
-      min-height: 72px;
-    }
+.card p{
+    color:#5c6675;
+    line-height:1.5;
+    min-height:95px;
+}
 
-    .tag {
-      display: inline-block;
-      background: var(--accent-light);
-      color: var(--accent);
-      padding: 5px 9px;
-      border-radius: 999px;
-      font-size: 13px;
-      font-weight: bold;
-      margin-bottom: 12px;
-    }
+.button{
+    display:inline-block;
+    background:#2f5ea8;
+    color:white;
+    text-decoration:none;
+    padding:10px 16px;
+    border-radius:10px;
+    font-weight:bold;
+}
 
-    .button {
-      display: inline-block;
-      margin-top: 12px;
-      text-decoration: none;
-      background: var(--accent);
-      color: white;
-      padding: 10px 14px;
-      border-radius: 10px;
-      font-weight: bold;
-      font-size: 14px;
-    }
+.button.secondary{
+    background:#eef2f7;
+    color:#334155;
+}
 
-    .button.secondary {
-      background: #f3f4f6;
-      color: #374151;
-      border: 1px solid var(--border);
-    }
-
-    footer {
-      text-align: center;
-      color: var(--muted);
-      font-size: 13px;
-      padding: 30px;
-    }
-  </style>
+footer{
+    text-align:center;
+    color:#6b7280;
+    padding:40px;
+    font-size:13px;
+}
+</style>
 </head>
+
 <body>
-  <header>
-    <h1>Practice Toolkit</h1>
-    <p>
-      A simple prototype space for practical tools, prompts and decision aids.
-      Start small, test what is useful, then build out the tools people actually return to.
-    </p>
-  </header>
 
-  <main>
-    <section class="intro">
-      <h2>Prototype Toolkit Home</h2>
-      <p>
-        This page is a starting point. Each card can become a separate tool or guidance page.
-        For now, the aim is to create a clean structure that can grow over time.
-      </p>
-    </section>
+<header>
+<h1>AFA Practice Companion</h1>
+<p>
+Practical support for MCA, DoLS, Care Act and Court of Protection practice.
+Built to support professional reasoning, not replace it. Click the section you are working on for practical guidance, prompts, common pitfalls and examples of what good looks like.
+</p>
+</header>
 
-    <section class="grid">
-      <div class="card">
-        <span class="tag">MCA</span>
-        <h3>MCA Question Builder</h3>
-        <p>Decision-specific prompts for understanding, retaining, using/weighing and communicating.</p>
-        <a class="button secondary" href="#">Coming soon</a>
-      </div>
+<div class="container">
 
-      <div class="card">
-        <span class="tag">DoLS</span>
-        <h3>Form 3 Helper</h3>
-        <p>Common hotspots for mental capacity, no refusals, eligibility, necessity and proportionality.</p>
-        <a class="button secondary" href="#">Coming soon</a>
-      </div>
+<div class="section-intro">
+<h2>Form 3 Companion (ADASS Structure)</h2>
+<p>
+The toolkit mirrors the order of the ADASS Form 3 so that support follows the way assessors actually complete assessments.
+If you are stuck on a section, click it. The aim is to support thinking, legal defensibility and confidence — not provide templates for copying.
+</p>
+</div>
 
-      <div class="card">
-        <span class="tag">DoLS</span>
-        <h3>Form 4 Helper</h3>
-        <p>Best interests reasoning, consultation, objections, less restrictive options and RPR issues.</p>
-        <a class="button secondary" href="#">Coming soon</a>
-      </div>
+<div class="grid">
 
-      <div class="card">
-        <span class="tag">QA</span>
-        <h3>Common QA Feedback</h3>
-        <p>Reusable wording for common assessor feedback, signatory returns and report strengthening.</p>
-        <a class="button secondary" href="#">Coming soon</a>
-      </div>
+<div class="card">
+<span class="tag">MCA</span>
+<h3>Mental Capacity Assessment</h3>
+<p>Decision-specific support with salient information, functional testing, causal nexus, material time, practicable steps and common pitfalls.</p>
+<a class="button" href="#">Build first</a>
+</div>
 
-      <div class="card">
-        <span class="tag">Care Act</span>
-        <h3>Review & Family Involvement</h3>
-        <p>Practical prompts for balancing consent, capacity, privacy and the need for a full picture.</p>
-        <a class="button secondary" href="#">Coming soon</a>
-      </div>
+<div class="card">
+<span class="tag">DoLS</span>
+<h3>No Refusals</h3>
+<p>ADRT, LPA, Deputyship, scope of authority, conflicts and common signatory concerns.</p>
+<a class="button secondary" href="#">Coming Soon</a>
+</div>
 
-      <div class="card">
-        <span class="tag">Court</span>
-        <h3>Court of Protection Helper</h3>
-        <p>Simple explainers for welfare orders, COPDOL11, objections and evidence planning.</p>
-        <a class="button secondary" href="#">Coming soon</a>
-      </div>
-    </section>
-  </main>
+<div class="card">
+<span class="tag">Context</span>
+<h3>Background</h3>
+<p>How much background is enough, relevant history, avoiding chronology dumping and linking history to current restrictions.</p>
+<a class="button secondary" href="#">Coming Soon</a>
+</div>
 
-  <footer>
-    Prototype only. Not legal advice. Professional judgement remains required.
-  </footer>
+<div class="card">
+<span class="tag">Person</span>
+<h3>Views of Relevant Person</h3>
+<p>Wishes, feelings, objection, distress, passive objection, consistency and evidencing the person’s voice.</p>
+<a class="button secondary" href="#">Coming Soon</a>
+</div>
+
+<div class="card">
+<span class="tag">Consultation</span>
+<h3>Views of Others</h3>
+<p>Family, staff and professionals. Triangulation, conflicting views and avoiding over-reliance on one source.</p>
+<a class="button secondary" href="#">Coming Soon</a>
+</div>
+
+<div class="card">
+<span class="tag">Objective</span>
+<h3>Objective Element</h3>
+<p>Restriction-by-restriction support using Guzzardi principles: restriction, duration, manner and effects.</p>
+<a class="button" href="#">Build first</a>
+</div>
+
+<div class="card">
+<span class="tag">Subjective</span>
+<h3>Subjective Element</h3>
+<p>Consent, objection, compliance versus acquiescence, attempts to leave and distress indicators.</p>
+<a class="button secondary" href="#">Coming Soon</a>
+</div>
+
+<div class="card">
+<span class="tag">Legal</span>
+<h3>Imputable to the State</h3>
+<p>Simple legal explainer and common misunderstandings about private placements and state responsibility.</p>
+<a class="button secondary" href="#">Coming Soon</a>
+</div>
+
+<div class="card">
+<span class="tag">Risk</span>
+<h3>Necessary</h3>
+<p>Risk builder for harms, likelihood, severity, personalisation and linking risks to restrictions.</p>
+<a class="button" href="#">Build first</a>
+</div>
+
+<div class="card">
+<span class="tag">Least Restrictive</span>
+<h3>Proportionate</h3>
+<p>Exploring less restrictive alternatives, why options are insufficient and future possibilities.</p>
+<a class="button secondary" href="#">Coming Soon</a>
+</div>
+
+<div class="card">
+<span class="tag">MCA</span>
+<h3>Best Interests</h3>
+<p>Benefits/burdens thinking, wishes and values, consultation and balancing competing options.</p>
+<a class="button secondary" href="#">Coming Soon</a>
+</div>
+
+<div class="card">
+<span class="tag">Authorisation</span>
+<h3>Length of Authorisation</h3>
+<p>What factors influence duration and how to justify shorter or longer periods.</p>
+<a class="button secondary" href="#">Coming Soon</a>
+</div>
+
+<div class="card">
+<span class="tag">Reasoning</span>
+<h3>Rationale for Length</h3>
+<p>Common rationales, review triggers and avoiding “12 months because standard”.</p>
+<a class="button secondary" href="#">Coming Soon</a>
+</div>
+
+<div class="card">
+<span class="tag">Timing</span>
+<h3>Start Date</h3>
+<p>Immediate authorisation, future start dates and practical considerations.</p>
+<a class="button secondary" href="#">Coming Soon</a>
+</div>
+
+<div class="card">
+<span class="tag">Conditions</span>
+<h3>Recommended Conditions</h3>
+<p>Meaningful, measurable conditions that genuinely reduce restrictions and improve care.</p>
+<a class="button secondary" href="#">Coming Soon</a>
+</div>
+
+<div class="card">
+<span class="tag">Actions</span>
+<h3>Recommendations</h3>
+<p>Court referrals, IMCA, safeguarding, therapy reviews and practical next steps.</p>
+<a class="button secondary" href="#">Coming Soon</a>
+</div>
+
+<div class="card">
+<span class="tag">Representation</span>
+<h3>RPR Selection</h3>
+<p>Capacity, family suitability, conflicts, paid representatives and evidencing rationale.</p>
+<a class="button secondary" href="#">Coming Soon</a>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+AFA Practice Companion — Professional judgement remains essential. Guidance supports practice and does not replace legal or professional responsibility.
+</footer>
+
 </body>
 </html>
